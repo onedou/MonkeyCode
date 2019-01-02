@@ -28,7 +28,12 @@ a.navbar-brand {
   height: inherit;
 }
 
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
 .navbar-nav .item {
+  position: relative;
   margin: 0 1em;
 }
 
@@ -183,6 +188,11 @@ a.navbar-brand {
   line-height: 1.8em;
   color: #fff;
   text-align: center;
+}
+
+.flexslider {
+  background: unset;
+  border: unset;
 }
 
 /* Shutter In Horizontal */
