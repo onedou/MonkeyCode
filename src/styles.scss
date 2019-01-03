@@ -3,7 +3,7 @@
 body {
   background-color: #fff!important;
   margin: 0!important;
-  font-family: 'Roboto Slab', serif!important;
+  font-family: 'Micsorft YaHei', sans-serif!important;
   font-size: 14px!important;
 }
 
@@ -36,4 +36,12 @@ label {
 
 body a:hover {
   text-decoration: none;
+}
+
+index {
+  .flex-direction-nav {
+    a:before {
+      font-size: 35px;
+    }
+  }
 }

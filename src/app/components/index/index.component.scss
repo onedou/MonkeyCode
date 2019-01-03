@@ -1,14 +1,14 @@
 /*--banner--*/
 .banner {
   min-height: 750px;
-  background: url(src/assets/images/banner.jpg)no-repeat 0px 0px;
+  background: url(src/assets/images/banner.png)no-repeat 0px 0px;
   background-size: cover;
   position: relative;
 }
 
 .header {
   background: rgba(0, 0, 0, 0.61);
-  padding: .5em 0;
+  // padding: .5em 0;
 }
 
 nav.navbar.navbar-default {
@@ -81,7 +81,6 @@ a.navbar-brand {
 .logo a {
   font-size: 3em;
   color: #FEEB73;
-  font-family: 'Candal', sans-serif;
   text-transform: uppercase;
 }
 
@@ -98,7 +97,6 @@ a.navbar-brand {
 .logo a h1 {
   font-size: 2em;
   color: #92d8f9;
-  font-family: 'Titillium Web', sans-serif;
 }
 
 .navbar-nav a:hover::before,
@@ -170,8 +168,7 @@ a.navbar-brand {
 .banner h1 {
   font-size: 4em;
   line-height: 1.2em;
-  color: #FEEB73;
-  font-family: 'Candal', sans-serif;
+  color: #000000;
   letter-spacing: 1px;
   text-align: center;
 }
@@ -179,14 +176,13 @@ a.navbar-brand {
 .banner-info span {
   font-size: 0.6em;
   text-align: center;
-  font-family: 'Julius Sans One', sans-serif;
 }
 
 .banner-info p {
   font-size: 1.1em;
   margin: 1em 0;
   line-height: 1.8em;
-  color: #fff;
+  color: #000000;
   text-align: center;
 }
 
