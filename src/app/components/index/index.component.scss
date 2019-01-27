@@ -1,7 +1,7 @@
 /*--banner--*/
 .banner {
   min-height: 750px;
-  background: url(src/assets/images/banner.png)no-repeat 0px 0px;
+  background: url(src/assets/images/banner.jpg)no-repeat 0px 0px;
   background-size: cover;
   position: relative;
 }
@@ -168,7 +168,7 @@ a.navbar-brand {
 .banner h1 {
   font-size: 4em;
   line-height: 1.2em;
-  color: #000000;
+  color: #ffffff;
   letter-spacing: 1px;
   text-align: center;
 }
@@ -182,7 +182,7 @@ a.navbar-brand {
   font-size: 1.1em;
   margin: 1em 0;
   line-height: 1.8em;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -354,6 +354,8 @@ a.navbar-brand {
   color: #777;
   text-align: left;
 }
+
+
 
 .bes-lft {
   float: left;
@@ -2416,7 +2418,7 @@ h2.typoh2 {
 }
 
 /*-- responsive design --*/
-@media (max-width:320px) {
+@media (max-width:400px) {
   .logo a {
     font-size: 1.7em;
   }

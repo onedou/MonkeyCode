@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { WOW } from 'wowjs'
 
 declare const $
 
@@ -11,16 +10,11 @@ declare const $
 export class IndexComponent {
   title = 'MonkeyCode'
 
-  constructor() {
-    new WOW().init()
-  }
+  constructor() {}
 
   ngAfterViewInit() {
     $('.flexslider').flexslider({
-      animation: 'slide',
-      start: function(slider) {
-        $('body').removeClass('loading')
-      }
+      animation: 'slide'
     })
   }
 }
