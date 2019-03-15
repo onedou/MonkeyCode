@@ -1,11 +1,14 @@
 import { signUpComponent } from './signUp.component'
 import { NgModule } from '@angular/core'
-import { ComponentsModule } from '../component.module'
+
+import { FooterModule } from '../../components/footer/footer.module'
+import { HeaderModule } from '../../components/header/header.module'
 
 @NgModule({
   declarations: [signUpComponent],
   imports: [
-    ComponentsModule
+    HeaderModule,
+    FooterModule
   ]
 })
 export class signUpModule {}
