@@ -1,0 +1,198 @@
+.footer h4 {
+  font-family: 'Candal', sans-serif;
+  font-size: 1.7em;
+  line-height: 1.3em;
+  margin: 0 0 1.5em;
+  color: #fff;
+}
+
+.soci li {
+  display: inline-block;
+  margin: 0 0.2em;
+}
+
+i.f-1 {
+  width: 30px;
+  height: 30px;
+  background: url(src/assets/images/soci.png)no-repeat -10px -8px;
+  float: left;
+  vertical-align: middle;
+}
+
+i.f-1:hover {
+  opacity: 0.5;
+}
+
+i.t-1 {
+  width: 30px;
+  height: 30px;
+  background: url(src/assets/images/soci.png)no-repeat -44px -8px;
+  float: left;
+  vertical-align: middle;
+}
+
+i.t-1:hover {
+  opacity: 0.5;
+}
+
+i.g-1 {
+  width: 30px;
+  height: 30px;
+  background: url(src/assets/images/soci.png)no-repeat -80px -8px;
+  float: left;
+  vertical-align: middle;
+}
+
+i.g-1:hover {
+  opacity: 0.5;
+}
+
+.footer-left li {
+  display: block;
+}
+
+.footer-left li a {
+  color: #CCBFBF;
+  font-size: 1.1em;
+  line-height: 1.8em;
+  text-decoration: none;
+}
+
+.footer-left li a:hover {
+  color: #FEEB73;
+}
+
+.footer p {
+  font-size: 1.1em;
+  margin: 2em 0 0;
+  line-height: 1.8em;
+  color: #CCBFBF;
+}
+
+.footer {
+  padding: 4em 0;
+  background-color: #424242;
+}
+
+.soci {
+  border-left: 1px solid #fff;
+  min-height: 150px;
+  padding-left: 40px;
+}
+
+ul.social-icons1 li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.staff-top h5 {
+  color: #002663;
+  font-size: 1.3em;
+  font-family: 'Candal', sans-serif;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.staff-top p {
+  text-align: center;
+}
+
+.copy {
+  text-align: center;
+}
+
+.copy a {
+  color: #FEEB73;
+}
+
+.copy a:hover {
+  color: #CCBFBF;
+}
+
+.banner-1 {
+  min-height: 350px;
+  background: url(src/assets/images/banner.jpg)no-repeat 0px 0px;
+  background-size: cover;
+}
+
+.team h2 {
+  font-size: 2em;
+  color: #002663;
+  margin-bottom: 1em;
+  font-family: 'Candal', sans-serif;
+  line-height: 1.3em;
+}
+
+.team {
+  margin: 0 0 5em;
+  text-align: center;
+}
+
+.team p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8em;
+}
+
+.team-grids {
+  position: relative;
+}
+
+.team-info {
+  margin-top: 3em;
+}
+
+.team-grids a {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.captn h4 {
+  color: #002663;
+  margin: .1em 0 0;
+  font-size: 1.7em;
+  font-family: 'Candal', sans-serif;
+}
+
+.captn p {
+  color: #002663;
+  font-size: 0.95em;
+  font-weight: 100;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.team-info img {
+  width: 100%;
+}
+
+.team-grids a .captn {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  font-weight: 800;
+  color: #002663;
+  position: absolute;
+  bottom: -86%;
+  right: 0%;
+  background-color: rgba(254, 235, 115, 0.56);
+  padding: 2% 10%;
+  text-align: center;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.fa {
+  font-size: 1.5em ! important;
+}
+
+.team-grids a:hover .captn {
+  width: 100%;
+  bottom: 0%;
+  padding: 44% 10%;
+  right: 0%;
+}
