@@ -10,6 +10,8 @@ import { AppComponent } from './app.component'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 
+import { AlertComponent } from '../app/components/alert/alert.component'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -22,6 +24,9 @@ import { FormsModule } from '@angular/forms'
     CommonModule,
     FormsModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AlertComponent
+  ]
 })
 export class AppModule { }
