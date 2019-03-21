@@ -1,9 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpClientModule } from '@angular/common/http'
+
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
+
+import { CommonModule } from '@angular/common'
+import { FormsModule } from '@angular/forms'
+
+import { AlertComponent } from '../app/components/alert/alert.component'
+import { AlertModule } from '../app/components/alert/alert.module'
 
 @NgModule({
   declarations: [
@@ -12,9 +20,15 @@ import { AppComponent } from './app.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    AlertModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AlertComponent
+  ]
 })
 export class AppModule { }
