@@ -33,7 +33,7 @@ export class SignUpComponent {
     }
   }
 
-  private async signUp() {
+  async signUp() {
     const nameIf =  /^[u4E00-u9FA5]+$/
     const name = this.studentName
 
