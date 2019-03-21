@@ -23,15 +23,11 @@ export class SignUpComponent {
     try {
       await this.signUpService.addData(data)
       this.dialog.open(AlertComponent, {
-        data: {
-          animal: '报名成功'
-        }
+        data: '报名成功'
       }) 
     }catch {
       this.dialog.open(AlertComponent, {
-        data: {
-          animal: '信息错误请重新填写'
-        }
+        data: '信息错误请重新填写'
       }) 
       console.error(error)
     }
@@ -43,9 +39,7 @@ export class SignUpComponent {
 
     if(!name || nameIf.test(name)) {
       this.dialog.open(AlertComponent, {
-        data: {
-          animal: '学生姓名格式错误'
-        }
+        data: '学生姓名格式错误'
       })
       return false
     }
@@ -55,18 +49,14 @@ export class SignUpComponent {
 
     if(!phoneNumber || !phoneIf.test(phoneNumber.toString())){ 
       this.dialog.open(AlertComponent, {
-        data: {
-          animal: '联系电话格式错误'
-        }
+        data: '联系电话格式错误'
       }) 
       return false
     }
 
     if(!this.education) {
       this.dialog.open(AlertComponent, {
-        data: {
-          animal: '请填写学生学历'
-        }
+        data: '请填写学生学历'
       })
       return false
     }
