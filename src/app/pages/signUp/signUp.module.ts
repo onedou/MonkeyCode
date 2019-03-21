@@ -1,14 +1,21 @@
-import { signUpComponent } from './signUp.component'
+import { SignUpComponent } from './signUp.component'
 import { NgModule } from '@angular/core'
 
 import { FooterModule } from '../../components/footer/footer.module'
 import { HeaderModule } from '../../components/header/header.module'
 
+import { CommonModule } from '@angular/common'
+import { FormsModule } from '@angular/forms'
+
 @NgModule({
-  declarations: [signUpComponent],
+  declarations: [
+    SignUpComponent
+  ],
   imports: [
     HeaderModule,
-    FooterModule
+    FooterModule,
+    CommonModule,
+    FormsModule
   ]
 })
-export class signUpModule {}
+export class SignUpModule {}
