@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 
 import { AlertComponent } from '../app/components/alert/alert.component'
+import { AlertModule } from '../app/components/alert/alert.module'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AlertComponent } from '../app/components/alert/alert.component'
     BrowserAnimationsModule,
     HttpClientModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    AlertModule
   ],
   bootstrap: [AppComponent],
   entryComponents: [

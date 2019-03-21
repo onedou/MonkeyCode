@@ -38,8 +38,8 @@ export class SignUpComponent {
   }
 
   private async signUp() {
-    let nameIf =  /^[u4E00-u9FA5]+$/
-    let name = this.studentName
+    const nameIf =  /^[u4E00-u9FA5]+$/
+    const name = this.studentName
 
     if(!name || nameIf.test(name)) {
       this.dialog.open(AlertComponent, {
@@ -50,8 +50,8 @@ export class SignUpComponent {
       return false
     }
 
-    let phoneIf = /^[1][3,4,5,7,8][0-9]{9}$/
-    let phoneNumber = this.phone
+    const phoneIf = /^[1][3,4,5,7,8][0-9]{9}$/
+    const phoneNumber = this.phone
 
     if(!phoneNumber || !phoneIf.test(phoneNumber.toString())){ 
       this.dialog.open(AlertComponent, {
@@ -71,7 +71,7 @@ export class SignUpComponent {
       return false
     }
 
-    let data = {
+    const data = {
       "student_name": this.studentName,
       "phone": this.phone,
       "education": this.education

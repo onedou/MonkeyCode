@@ -9,7 +9,6 @@ import {
 
 import { FooterModule } from '../../components/footer/footer.module'
 import { HeaderModule } from '../../components/header/header.module'
-import { AlertModule } from '../../components/alert/alert.module'
 
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
@@ -28,8 +27,7 @@ import { SignUpService } from './signUp.service'
     HeaderModule,
     FooterModule,
     CommonModule,
-    FormsModule,
-    AlertModule
+    FormsModule
   ],
   providers: [
     SignUpService
