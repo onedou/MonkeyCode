@@ -15,9 +15,13 @@ export class SignUpService {
   studentName: string
   phone: number
   education: string
+  addApi: string = 'api/signup/monkeycode'
 
   constructor(private http: HttpClient) { }
-  getConfig(data) {
-    return this.http.post(environment.api, data , httpOptions).toPromise()
+
+  // 报名添加信息
+  addData(data) {
+    let url = environment.api + this.addApi
+    return this.http.post(url, data , httpOptions).toPromise()
   }
 }

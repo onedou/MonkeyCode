@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://api.bel.org.cn/api/signup/monkeycode'
+  api: 'http://api.bel.org.cn/'
 };
 
 /*

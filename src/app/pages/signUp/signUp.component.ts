@@ -19,18 +19,18 @@ export class SignUpComponent {
     public dialog: MatDialog
     ){}
 
-  async showConfig(data) {
+  async signUpSuccess(data) {
     try {
-      await this.signUpService.getConfig(data)
+      await this.signUpService.addData(data)
       this.dialog.open(AlertComponent, {
         data: {
-          animal: 'success'
+          animal: '报名成功'
         }
       }) 
     }catch {
       this.dialog.open(AlertComponent, {
         data: {
-          animal: 'error'
+          animal: '信息错误请重新填写'
         }
       }) 
       console.error(error)
@@ -41,10 +41,10 @@ export class SignUpComponent {
     let nameIf =  /^[u4E00-u9FA5]+$/
     let name = this.studentName
 
-    if(nameIf.test(name)) {
+    if(!name || nameIf.test(name)) {
       this.dialog.open(AlertComponent, {
         data: {
-          animal: 'studentName'
+          animal: '学生姓名格式错误'
         }
       })
       return false
@@ -56,7 +56,7 @@ export class SignUpComponent {
     if(!phoneNumber || !phoneIf.test(phoneNumber.toString())){ 
       this.dialog.open(AlertComponent, {
         data: {
-          animal: 'phone'
+          animal: '联系电话格式错误'
         }
       }) 
       return false
@@ -65,7 +65,7 @@ export class SignUpComponent {
     if(!this.education) {
       this.dialog.open(AlertComponent, {
         data: {
-          animal: 'education'
+          animal: '请填写学生学历'
         }
       })
       return false
@@ -77,7 +77,7 @@ export class SignUpComponent {
       "education": this.education
     }
     
-    this.showConfig(data)
+    this.signUpSuccess(data)
   }
 
 }
