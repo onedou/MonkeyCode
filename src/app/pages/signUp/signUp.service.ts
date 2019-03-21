@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { HttpHeaders } from '@angular/common/http'
+import { environment } from '../../../environments/environment'
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,11 +17,7 @@ export class SignUpService {
   education: string
 
   constructor(private http: HttpClient) { }
-  configUrl = 'http://api.bel.org.cn/api/signup/monkeycode'
-  test = {
-    
-  }
   getConfig(data) {
-    return this.http.post(this.configUrl,data , httpOptions).toPromise()
+    return this.http.post(environment.api, data , httpOptions).toPromise()
   }
 }
