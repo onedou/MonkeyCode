@@ -1,0 +1,19 @@
+.lodingDiv {
+  position: absolute;
+  width: 100%;
+  height: 501.3px;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10;
+}
+.lodingClass {
+  zoom: 0.5;
+  display: flex;
+  justify-content:center;
+  align-items:Center;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+}

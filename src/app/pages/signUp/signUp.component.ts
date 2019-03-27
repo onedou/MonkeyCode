@@ -1,8 +1,9 @@
-import { Component, Inject } from '@angular/core'
+import { Component, Inject, Input } from '@angular/core'
 import { SignUpService } from './signUp.service'
 import { error } from 'util'
 import { MatDialog } from '@angular/material'
 import { AlertComponent } from '../../components/alert/alert.component'
+import { VIEWPORT_RULER_PROVIDER_FACTORY } from '@angular/cdk/scrolling';
 
 @Component({
   selector: 'signUp',
@@ -13,6 +14,7 @@ export class SignUpComponent {
   studentName: string
   phone: number
   education: string
+  lodingShow = false
 
   constructor(
     public signUpService: SignUpService,
@@ -22,15 +24,28 @@ export class SignUpComponent {
   async signUpSuccess(data) {
     try {
       await this.signUpService.addData(data)
+      this.lodingShow = false
       this.dialog.open(AlertComponent, {
         data: '报名成功'
       }) 
     }catch {
+      this.lodingShow = false
       this.dialog.open(AlertComponent, {
         data: '信息错误请重新填写'
       }) 
       console.error(error)
     }
+  }
+
+  setTimeOutShow() {
+    setTimeout(() => {
+      if(this.lodingShow) {
+        this.lodingShow = false
+        this.dialog.open(AlertComponent, {
+          data: '网络延迟，请稍等'
+        })
+      }
+    }, 5000)
   }
 
   async signUp() {
@@ -61,6 +76,8 @@ export class SignUpComponent {
       return false
     }
 
+    this.lodingShow = true
+
     const data = {
       "student_name": this.studentName,
       "phone": this.phone,
@@ -68,6 +85,7 @@ export class SignUpComponent {
     }
     
     this.signUpSuccess(data)
+    this.setTimeOutShow()
   }
 
 }

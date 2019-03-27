@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms'
 import { AlertComponent } from '../app/components/alert/alert.component'
 import { AlertModule } from '../app/components/alert/alert.module'
 
+import { LodingComponent } from '../app/components/loding/loding.component'
+import { LodingModule } from '../app/components/loding/loding.module'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,11 +27,13 @@ import { AlertModule } from '../app/components/alert/alert.module'
     HttpClientModule,
     CommonModule,
     FormsModule,
-    AlertModule
+    AlertModule,
+    LodingModule
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    AlertComponent
+    AlertComponent,
+    LodingComponent
   ]
 })
 export class AppModule { }
