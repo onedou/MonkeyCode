@@ -7,15 +7,12 @@ import {
   MatDialogModule
 } from '@angular/material'
 
-import { FooterModule } from '../../components/footer/footer.module'
-import { HeaderModule } from '../../components/header/header.module'
-
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 
 import { SignUpService } from './signUp.service'
 
-import { LoadingModule } from '../../components/loading/loading.module'
+import { ComponentsModule } from '../../components/component.module'
 
 @NgModule({
   declarations: [
@@ -26,11 +23,9 @@ import { LoadingModule } from '../../components/loading/loading.module'
     MatCheckboxModule,
     MatCardModule,
     MatDialogModule,
-    HeaderModule,
-    FooterModule,
+    ComponentsModule,
     CommonModule,
-    FormsModule,
-    LoadingModule
+    FormsModule
   ],
   providers: [
     SignUpService

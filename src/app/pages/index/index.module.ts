@@ -6,17 +6,16 @@ import {
   MatCardModule
 } from '@angular/material'
 
-import { FooterModule } from '../../components/footer/footer.module'
-import { HeaderModule } from '../../components/header/header.module'
+import { ComponentsModule } from '../../components/component.module'
+
 
 @NgModule({
   declarations: [IndexComponent],
   imports: [
-    HeaderModule,
-    FooterModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    ComponentsModule
   ]
 })
 export class IndexModule {}

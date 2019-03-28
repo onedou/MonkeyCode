@@ -25,6 +25,7 @@ import { ComponentsModule } from '../app/components/component.module'
     FormsModule,
     ComponentsModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: []
 })
 export class AppModule { }
