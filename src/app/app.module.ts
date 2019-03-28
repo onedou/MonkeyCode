@@ -10,11 +10,7 @@ import { AppComponent } from './app.component'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 
-import { AlertComponent } from '../app/components/alert/alert.component'
-import { AlertModule } from '../app/components/alert/alert.module'
-
-import { LodingComponent } from '../app/components/loding/loding.component'
-import { LodingModule } from '../app/components/loding/loding.module'
+import { ComponentsModule } from '../app/components/component.module'
 
 @NgModule({
   declarations: [
@@ -27,13 +23,8 @@ import { LodingModule } from '../app/components/loding/loding.module'
     HttpClientModule,
     CommonModule,
     FormsModule,
-    AlertModule,
-    LodingModule
+    ComponentsModule
   ],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    AlertComponent,
-    LodingComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

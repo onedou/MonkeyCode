@@ -1,13 +1,13 @@
-import { LodingComponent } from './loding.component'
+import { LoadingComponent } from './loading.component'
 import { NgModule } from '@angular/core'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 
 @NgModule({
-  declarations: [LodingComponent],
+  declarations: [LoadingComponent],
   exports: [
-    LodingComponent,
+    LoadingComponent,
     MatProgressSpinnerModule
   ],
   imports: [
@@ -16,4 +16,4 @@ import { FormsModule } from '@angular/forms'
     MatProgressSpinnerModule
   ]
 })
-export class LodingModule {}
+export class LoadingModule {}

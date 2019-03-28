@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms'
 
 import { SignUpService } from './signUp.service'
 
-import { LodingModule } from '../../components/loding/loding.module'
+import { LoadingModule } from '../../components/loading/loading.module'
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { LodingModule } from '../../components/loding/loding.module'
     FooterModule,
     CommonModule,
     FormsModule,
-    LodingModule
+    LoadingModule
   ],
   providers: [
     SignUpService
