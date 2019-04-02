@@ -1,8 +1,10 @@
-import { Component, Inject, Input } from '@angular/core'
+import { Component } from '@angular/core'
 import { SignUpService } from './signUp.service'
 import { error } from 'util'
 import { MatDialog } from '@angular/material'
-import { AlertComponent } from '../../components/alert/alert.component'
+// import { AlertComponent } from '../../components/alert/alert.component'
+import { LoadingProvider } from '../../components/loading/loading.provider'
+import { AlertProvider } from '../../components/alert/alert.provider'
 
 @Component({
   selector: 'signUp',
@@ -13,26 +15,23 @@ export class SignUpComponent {
   studentName: string
   phone: number
   education: string
-  loadingShow: boolean
-  loadingShowNumber = 5000
+  test: boolean
 
   constructor(
     public signUpService: SignUpService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public loading: LoadingProvider,
+    public alert: AlertProvider
     ){}
 
   async signUpSuccess(data) {
     try {
       await this.signUpService.addData(data)
-      this.loadingShow = false
-      this.dialog.open(AlertComponent, {
-        data: '报名成功'
-      }) 
+      this.loading.alertClose()
+      this.alert.alertOpen('报名成功')
     }catch {
-      this.loadingShow = false
-      this.dialog.open(AlertComponent, {
-        data: '信息错误请重新填写'
-      }) 
+      this.alert.alertOpen('信息错误请重新填写')
+      this.loading.alertClose()
       console.error(error)
     }
   }
@@ -42,9 +41,7 @@ export class SignUpComponent {
     const name = this.studentName
 
     if(!name || nameIf.test(name)) {
-      this.dialog.open(AlertComponent, {
-        data: '学生姓名格式错误'
-      })
+      this.alert.alertOpen('学生姓名格式错误')
       return false
     }
 
@@ -52,20 +49,16 @@ export class SignUpComponent {
     const phoneNumber = this.phone
 
     if(!phoneNumber || !phoneIf.test(phoneNumber.toString())){ 
-      this.dialog.open(AlertComponent, {
-        data: '联系电话格式错误'
-      }) 
+      this.alert.alertOpen('联系电话格式错误')
       return false
     }
 
     if(!this.education) {
-      this.dialog.open(AlertComponent, {
-        data: '请填写学生学历'
-      })
+      this.alert.alertOpen('请填写学生学历')
       return false
     }
 
-    this.loadingShow = true
+    this.loading.alertOpen(10)
 
     const data = {
       "student_name": this.studentName,

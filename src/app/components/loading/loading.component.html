@@ -1,8 +1,9 @@
-<div class="loadingDiv" *ngIf = "loadingShow">
+<div mat-dialog-content class="loadingAlert">
   <mat-progress-spinner
   [color] = 'color'
   [mode] = 'mode'
   [value] = 'value'
-  class="loadingClass">
+  class="loading">
   </mat-progress-spinner>
+  <div class="loadingText"> 网络加载中 </div>
 </div>

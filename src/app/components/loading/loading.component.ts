@@ -1,5 +1,4 @@
-import { Component, Inject, Input } from '@angular/core'
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'loading',
@@ -7,18 +6,9 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
   styleUrls: ['./loading.component.scss']
 })
 export class LoadingComponent {
-  @Input() loadingShow:boolean = false
-  @Input() loadingShowNumber: number
+  constructor() {}
 
   color = 'primary'
   mode = 'indeterminate'
   value = 50
-
-  ngOnChanges(loadingShow: boolean) {
-    setTimeout(() => {
-      if(this.loadingShow) {
-        this.loadingShow = false
-      }
-    }, this.loadingShowNumber)
-  }
 }

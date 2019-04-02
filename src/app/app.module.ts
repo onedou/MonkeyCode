@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms'
 
 import { ComponentsModule } from '../app/components/component.module'
 
+import { LoadingProvider } from '../app/components/loading/loading.provider'
+import { AlertProvider } from '../app/components/alert/alert.provider'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -26,6 +29,10 @@ import { ComponentsModule } from '../app/components/component.module'
     ComponentsModule
   ],
   bootstrap: [AppComponent],
-  entryComponents: []
+  entryComponents: [],
+  providers: [
+    LoadingProvider,
+    AlertProvider
+  ]
 })
 export class AppModule { }
