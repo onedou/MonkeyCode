@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 import { SignUpService } from './signUp.service'
 import { error } from 'util'
-import { MatDialog } from '@angular/material'
 import { LoadingProvider } from '../../components/loading/loading.provider'
 import { AlertProvider } from '../../components/alert/alert.provider'
 
@@ -17,19 +16,18 @@ export class SignUpComponent {
 
   constructor(
     public signUpService: SignUpService,
-    public dialog: MatDialog,
-    public loading: LoadingProvider,
-    public alert: AlertProvider
+    public loadingProvider: LoadingProvider,
+    public alertProvider: AlertProvider
     ){}
 
   async signUpSuccess(data) {
     try {
       await this.signUpService.addData(data)
-      this.loading.close()
-      this.alert.open('报名成功')
+      this.loadingProvider.close()
+      this.alertProvider.open('报名成功')
     }catch {
-      this.alert.open('信息错误请重新填写')
-      this.loading.close()
+      this.alertProvider.open('信息错误请重新填写')
+      this.loadingProvider.close()
       console.error(error)
     }
   }
@@ -39,7 +37,7 @@ export class SignUpComponent {
     const name = this.studentName
 
     if(!name || nameIf.test(name)) {
-      this.alert.open('学生姓名格式错误')
+      this.alertProvider.open('学生姓名格式错误')
       return false
     }
 
@@ -47,16 +45,16 @@ export class SignUpComponent {
     const phoneNumber = this.phone
 
     if(!phoneNumber || !phoneIf.test(phoneNumber.toString())){ 
-      this.alert.open('联系电话格式错误')
+      this.alertProvider.open('联系电话格式错误')
       return false
     }
 
     if(!this.education) {
-      this.alert.open('请填写学生学历')
+      this.alertProvider.open('请填写学生学历')
       return false
     }
 
-    this.loading.open(10)
+    this.loadingProvider.open(10)
 
     const data = {
       "student_name": this.studentName,
