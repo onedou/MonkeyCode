@@ -10,8 +10,10 @@ import { AppComponent } from './app.component'
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 
-import { AlertComponent } from '../app/components/alert/alert.component'
-import { AlertModule } from '../app/components/alert/alert.module'
+import { ComponentsModule } from '../app/components/component.module'
+
+import { LoadingProvider } from '../app/components/loading/loading.provider'
+import { AlertProvider } from '../app/components/alert/alert.provider'
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { AlertModule } from '../app/components/alert/alert.module'
     HttpClientModule,
     CommonModule,
     FormsModule,
-    AlertModule
+    ComponentsModule
   ],
   bootstrap: [AppComponent],
-  entryComponents: [
-    AlertComponent
+  entryComponents: [],
+  providers: [
+    LoadingProvider,
+    AlertProvider
   ]
 })
 export class AppModule { }
