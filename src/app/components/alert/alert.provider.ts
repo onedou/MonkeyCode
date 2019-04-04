@@ -7,13 +7,13 @@ import { AlertComponent } from './alert.component'
 })
 
 export class AlertProvider {
-  open:any
+  alertIns:any
   constructor (
     public dialog: MatDialog
   ) {}
 
-  alertOpen(text) {
-    this.open = this.dialog.open(AlertComponent, {
+  open(text) {
+    this.alertIns = this.dialog.open(AlertComponent, {
       data: text
     })
   }

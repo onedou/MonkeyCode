@@ -7,34 +7,33 @@ import { LoadingComponent } from './loading.component'
 })
 
 export class LoadingProvider {
-  open:any
-  close: boolean = false
+  dialogIns:any
   constructor (
     public dialog: MatDialog
   ) {}
 
-  alertOpen(sec) {
-    this.open = this.dialog.open(LoadingComponent, {
+  open(sec) {
+    this.dialogIns = this.dialog.open(LoadingComponent, {
       disableClose: true
     })
     this.countDown(sec)
   }
 
-  alertClose() {
-    this.open.close()
+  close() {
+    this.dialogIns.close()
   }
 
   countDown(num) {
     if(num > 0) {
       num --
-      this.open.afterClosed().subscribe(() => {
+      this.dialogIns.afterClosed().subscribe(() => {
         return false
       })
       setTimeout(() => {
         this.countDown(num)
       },1000)
     }else {
-      this.open.close()
+      this.dialogIns.close()
     }
   }
 }
