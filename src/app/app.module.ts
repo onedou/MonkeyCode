@@ -15,6 +15,8 @@ import { ComponentsModule } from '../app/components/component.module'
 import { LoadingProvider } from '../app/components/loading/loading.provider'
 import { AlertProvider } from '../app/components/alert/alert.provider'
 
+import { ApiService } from '../api/api.service'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -32,7 +34,8 @@ import { AlertProvider } from '../app/components/alert/alert.provider'
   entryComponents: [],
   providers: [
     LoadingProvider,
-    AlertProvider
+    AlertProvider,
+    ApiService
   ]
 })
 export class AppModule { }
