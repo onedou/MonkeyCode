@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { SignUpService } from './signUp.service'
+import { ApiService } from '../../../api/api.service'
 import { error } from 'util'
 import { LoadingProvider } from '../../components/loading/loading.provider'
 import { AlertProvider } from '../../components/alert/alert.provider'
@@ -15,14 +15,14 @@ export class SignUpComponent {
   education: string
 
   constructor(
-    public signUpService: SignUpService,
+    public apiService: ApiService,
     public loadingProvider: LoadingProvider,
     public alertProvider: AlertProvider
     ){}
 
   async signUpSuccess(data) {
     try {
-      await this.signUpService.addData(data)
+      await this.apiService.signUp(data)
       this.loadingProvider.close()
       this.alertProvider.open('报名成功')
     }catch {

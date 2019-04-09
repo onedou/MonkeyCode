@@ -10,8 +10,6 @@ import {
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 
-import { SignUpService } from './signUp.service'
-
 import { ComponentsModule } from '../../components/component.module'
 
 @NgModule({
@@ -26,9 +24,6 @@ import { ComponentsModule } from '../../components/component.module'
     ComponentsModule,
     CommonModule,
     FormsModule
-  ],
-  providers: [
-    SignUpService
   ]
 })
 export class SignUpModule {}
