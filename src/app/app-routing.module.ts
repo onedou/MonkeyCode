@@ -7,7 +7,7 @@ import { SignUpComponent } from './pages/signUp/signUp.component'
 import { SignUpModule } from './pages/signUp/signUp.module'
 
 const routes: Routes = [
-  {path: 'index', component: IndexComponent},
+  {path: '', component: IndexComponent},
   {path: 'signUp', component: SignUpComponent}
 ];
 
