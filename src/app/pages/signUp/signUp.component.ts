@@ -35,8 +35,6 @@ export class SignUpComponent {
 
   async signUp() {
 
-    // const test = this.phone.toString()
-
     function dataFilter(nameRe: RegExp): ValidatorFn {
       return (control: AbstractControl): {[key: string]: any} | null => {
         const forbidden = nameRe.test(control.value);
