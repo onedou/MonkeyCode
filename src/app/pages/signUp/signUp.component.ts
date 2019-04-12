@@ -4,6 +4,7 @@ import { error } from 'util'
 import { LoadingProvider } from '../../components/loading/loading.provider'
 import { AlertProvider } from '../../components/alert/alert.provider'
 import { FormGroup, FormControl, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
+import { getMatTooltipInvalidPositionError } from '@angular/material';
 
 @Component({
   selector: 'signUp',
@@ -34,14 +35,6 @@ export class SignUpComponent {
   }
 
   async signUp() {
-
-    function dataFilter(nameRe: RegExp): ValidatorFn {
-      return (control: AbstractControl): {[key: string]: any} | null => {
-        const forbidden = nameRe.test(control.value);
-        return forbidden ? {'name': {value: control.value}} : null;
-      }
-    }
-
     const signUpData = new FormGroup(
       {
         'name': new FormControl(
@@ -49,7 +42,11 @@ export class SignUpComponent {
             Validators.required,
             Validators.minLength(2),
             Validators.maxLength(4),
-            dataFilter(/^[u4E00-u9FA5]/)
+            (control: AbstractControl): {[key: string]: any} | null => {
+              const nameRe = /^[u4E00-u9FA5]/
+              const forbidden = nameRe.test(control.value);
+              return forbidden ? { 'name' : { value: control.value } } : null;
+            }
           ]
         ),
         'phone': new FormControl(
@@ -57,7 +54,11 @@ export class SignUpComponent {
             Validators.required,
             Validators.minLength(11),
             Validators.maxLength(11),
-            dataFilter(/^1[1,2,6,9][0-9]{9}$/)
+            (control: AbstractControl): {[key: string]: any} | null => {
+              const nameRe = /^1[1,2,6,9][0-9]{9}$/
+              const forbidden = nameRe.test(control.value);
+              return forbidden ? { 'phone' : { value: control.value } } : null;
+            }
           ]
         )
       }
@@ -65,7 +66,7 @@ export class SignUpComponent {
 
     const name = signUpData.get('name')
     const phone = signUpData.get('phone')
-
+    
     if(name.invalid) {
       this.alertProvider.open('学生姓名格式错误')
       return false
