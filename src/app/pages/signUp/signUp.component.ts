@@ -3,6 +3,7 @@ import { ApiService } from '../../../api/api.service'
 import { error } from 'util'
 import { LoadingProvider } from '../../components/loading/loading.provider'
 import { AlertProvider } from '../../components/alert/alert.provider'
+import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms'
 
 @Component({
   selector: 'signUp',
@@ -33,18 +34,44 @@ export class SignUpComponent {
   }
 
   async signUp() {
-    const nameIf =  /^[u4E00-u9FA5]+$/
-    const name = this.studentName
+    const signUpData = new FormGroup(
+      {
+        'name': new FormControl(
+          this.studentName, [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(4),
+            (control: AbstractControl): {[key: string]: any} | null => {
+              const nameRe = /^[u4E00-u9FA5]/
+              const forbidden = nameRe.test(control.value);
+              return forbidden ? { 'name' : { value: control.value } } : null;
+            }
+          ]
+        ),
+        'phone': new FormControl(
+          this.phone, [
+            Validators.required,
+            Validators.minLength(11),
+            Validators.maxLength(11),
+            (control: AbstractControl): {[key: string]: any} | null => {
+              const nameRe = /^1[1,2,6,9][0-9]{9}$/
+              const forbidden = nameRe.test(control.value);
+              return forbidden ? { 'phone' : { value: control.value } } : null;
+            }
+          ]
+        )
+      }
+    )
 
-    if(!name || nameIf.test(name)) {
+    const name = signUpData.get('name')
+    const phone = signUpData.get('phone')
+    
+    if(name && name.invalid) {
       this.alertProvider.open('学生姓名格式错误')
       return false
     }
 
-    const phoneIf = /^[1][3,4,5,7,8][0-9]{9}$/
-    const phoneNumber = this.phone
-
-    if(!phoneNumber || !phoneIf.test(phoneNumber.toString())){ 
+    if(name && phone.invalid) {
       this.alertProvider.open('联系电话格式错误')
       return false
     }
