@@ -3,8 +3,7 @@ import { ApiService } from '../../../api/api.service'
 import { error } from 'util'
 import { LoadingProvider } from '../../components/loading/loading.provider'
 import { AlertProvider } from '../../components/alert/alert.provider'
-import { FormGroup, FormControl, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
-import { getMatTooltipInvalidPositionError } from '@angular/material';
+import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms'
 
 @Component({
   selector: 'signUp',
@@ -67,12 +66,12 @@ export class SignUpComponent {
     const name = signUpData.get('name')
     const phone = signUpData.get('phone')
     
-    if(name.invalid) {
+    if(name && name.invalid) {
       this.alertProvider.open('学生姓名格式错误')
       return false
     }
 
-    if(phone.invalid) {
+    if(name && phone.invalid) {
       this.alertProvider.open('联系电话格式错误')
       return false
     }
