@@ -14,6 +14,10 @@
   background-repeat: no-repeat;
   background-size: 100%;
   margin: 0 auto 10px auto;
+  text-align: center;
+  line-height: 43px;
+  color: #fff;
+  font-size: 12px;
 }
 
 .suspension-main-menu-1 {
@@ -23,24 +27,21 @@
   width: 106px;
   height: 33px;
   margin: 0 auto 10px auto;
-}
-
-.suspension-main-menu-2 {
-  background-image: url(src/assets/images/SuspensionMenu3.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 106px;
-  height: 33px;
-  margin: 0 auto 10px auto;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
 }
 
 .suspension-bottom-menu {
-  background-image: url(src/assets/images/SuspensionMenu4.png);
+  background-image: url(src/assets/images/SuspensionMenu3.png);
   background-repeat: no-repeat;
   background-size: 100%;
   width: 106px;
   height: 65px;
   margin: 0 auto;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
 }
 
 /*--banner--*/
