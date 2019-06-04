@@ -1,0 +1,192 @@
+.contact {
+  width: 100%;
+  height: 890px;
+  background-image: url(../../../assets/images/banner.jpg);
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.contact-text {
+  padding-top: 190px;
+}
+
+.contact-text div {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.shop {
+  font-size: 2em;
+}
+
+.shop-address {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+.phone {
+  font-size: 2em;
+}
+
+.phone-number {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+.wechat {
+  font-size: 2em;
+}
+
+.wechat-number {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+.body-bottom {
+  width: 100%;
+  height: 775px;
+}
+
+.map {
+  background-image: url(../../../assets/images/map.jpg);
+  width: 65%;
+  height: 775px;
+  float: left;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.QR-code {
+  background-image: url(../../../assets/images/QR.jpg);
+  width: 30%;
+  height: 775px;
+  float: right;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@media (max-width:1024px) {
+  .contact {
+    height: 560px;
+  }
+  
+  .shop {
+    font-size: 1em;
+  }
+  
+  .shop-address {
+    font-size: 1.5em;
+    font-weight: bolder;
+  }
+  
+  .phone {
+    font-size: 1em;
+  }
+  
+  .phone-number {
+    font-size: 1.5em;
+    font-weight: bolder;
+  }
+  
+  .wechat {
+    font-size: 1em;
+  }
+  
+  .wechat-number {
+    font-size: 1.5em;
+    font-weight: bolder;
+  }
+
+  .body-bottom {
+    height: 434px;
+  }
+
+  .map {
+    height: 434px;
+  }
+  
+  .QR-code {
+    height: 434px;
+  }
+}
+
+@media (max-width:768px) {
+  .contact {
+    height: 410px;
+  }
+
+  .contact-text {
+    padding-top: 90px;
+  }
+
+  .body-bottom {
+    height: 377px;
+  }
+
+  .map {
+    height: 377px;
+  }
+  
+  .QR-code {
+    height: 377px;
+  }
+}
+
+@media (max-width:640px) {
+  .contact {
+    width: 100%;
+    height: 170px;
+  }
+
+  .contact-text {
+    padding-top: 25px;
+  }
+
+  .contact-text div {
+    margin-bottom: 5px;
+  }
+
+  .shop {
+    font-size: 0.5em;
+  }
+  
+  .shop-address {
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  
+  .phone {
+    font-size: 0.5em;
+  }
+  
+  .phone-number {
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  
+  .wechat {
+    font-size: 0.5em;
+  }
+  
+  .wechat-number {
+    font-size: 1em;
+    font-weight: bolder;
+  }
+
+  .body-bottom {
+    width: 100%;
+    height: 155px;
+  }
+
+  .map {
+    height: 155px;
+  }
+
+  .QR-code {
+    height: 155px;
+  }
+}
