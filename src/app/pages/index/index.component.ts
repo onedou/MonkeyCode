@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Router } from '@angular/router'
 
 declare const $
 
@@ -10,7 +11,13 @@ declare const $
 export class IndexComponent {
   title = 'MonkeyCode'
 
-  constructor() {}
+  constructor(
+    private router: Router
+  ) {
+    console.log(this.router)
+  }
+
+  url: string = this.router && this.router.url && this.router.url || ''
 
   ngAfterViewInit() {
     $('.flexslider').flexslider({
