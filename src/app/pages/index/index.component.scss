@@ -1385,6 +1385,11 @@ h2.typoh2 {
 }
 
 @media (max-width:768px) {
+
+  .suspension-menu {
+    display: none;
+  }
+
   .grid_5 {
     padding: 0 0 1em;
   }
@@ -1395,6 +1400,10 @@ h2.typoh2 {
 }
 
 @media (max-width:640px) {
+
+  .suspension-menu {
+    display: none;
+  }
 
   h1,
   .h1,
@@ -1478,6 +1487,11 @@ h2.typoh2 {
 }
 
 @media (max-width: 320px) {
+
+  .suspension-menu {
+    display: none;
+  }
+  
   .grid_4 {
     margin-top: 18px;
   }

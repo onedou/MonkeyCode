@@ -1,0 +1,28 @@
+<content>
+  <div id="wrapper">
+    <div id="toolbar">
+      <div class="button" (click)="button()" [ngClass]="{ 'active' : openMenu }">+</div>
+      <ul class="icons" [ngClass]="{ 'open' : openMenu }">
+        <!-- <li><i class="fa fa-home fa-2x"></i></li> -->
+        <li>
+          <a [ngClass]="url === '/' ? 'active' : ''" routerLink="/">
+            <i class="fa fa-user fa-2x"></i>
+            客服咨询
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="url === '/curriculum' ? 'active' : ''" routerLink="/curriculum">
+            <i class="fa fa-star fa-2x"></i>
+            课程介绍
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="url === '/signUp' ? 'active' : ''" routerLink="/signUp">
+            <i class="fa fa-file-text-o fa-2x"></i>
+            在线报名
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</content>

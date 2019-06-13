@@ -18,29 +18,29 @@
 }
 
 .shop {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .shop-address {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bolder;
 }
 
 .phone {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .phone-number {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bolder;
 }
 
 .wechat {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .wechat-number {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bolder;
 }
 
@@ -67,6 +67,10 @@
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.anchorBL{
+  display:none;
 }
 
 @media (max-width:1024px) {

@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component'
 import { HeaderComponent } from './header/header.component'
 import { AlertComponent } from './alert/alert.component'
 import { LoadingComponent } from './loading/loading.component'
+import { BottomComponent } from './bottom/bottom.component'
+import { DiscMenuComponent } from './discMenu/discMenu.component'
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { LoadingComponent } from './loading/loading.component'
     FooterComponent,
     HeaderComponent,
     AlertComponent,
-    LoadingComponent
+    LoadingComponent,
+    BottomComponent,
+    DiscMenuComponent
   ],
   imports: [
     CommonModule,
@@ -30,13 +34,17 @@ import { LoadingComponent } from './loading/loading.component'
     FooterComponent,
     HeaderComponent,
     AlertComponent,
-    LoadingComponent
+    LoadingComponent,
+    BottomComponent,
+    DiscMenuComponent
   ],
   exports: [
     FooterComponent,
     HeaderComponent,
     AlertComponent,
-    LoadingComponent
+    LoadingComponent,
+    BottomComponent,
+    DiscMenuComponent
   ]
 })
 
