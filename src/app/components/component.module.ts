@@ -7,11 +7,11 @@ import { FormsModule } from '@angular/forms'
 import { ComponentRoutingModule } from './component-routing.module'
 
 import { FooterComponent } from './footer/footer.component'
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from '../common/header/header.component'
 import { AlertComponent } from './alert/alert.component'
 import { LoadingComponent } from './loading/loading.component'
-import { BottomComponent } from './bottom/bottom.component'
-import { DiscMenuComponent } from './discMenu/discMenu.component'
+import { BottomComponent } from '../common/bottom/bottom.component'
+import { DiscMenuComponent } from '../common/discMenu/discMenu.component'
 
 
 @NgModule({
