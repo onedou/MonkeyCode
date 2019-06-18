@@ -6,10 +6,12 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { ComponentRoutingModule } from './component-routing.module'
 
-import { FooterComponent } from './footer/footer.component'
-import { HeaderComponent } from './header/header.component'
+import { FooterComponent } from '../pages/common/footer/footer.component'
+import { HeaderComponent } from '../pages/common/header/header.component'
 import { AlertComponent } from './alert/alert.component'
 import { LoadingComponent } from './loading/loading.component'
+import { BottomComponent } from '../pages/common/bottom/bottom.component'
+import { DiscMenuComponent } from '../pages/common/discMenu/discMenu.component'
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { LoadingComponent } from './loading/loading.component'
     FooterComponent,
     HeaderComponent,
     AlertComponent,
-    LoadingComponent
+    LoadingComponent,
+    BottomComponent,
+    DiscMenuComponent
   ],
   imports: [
     CommonModule,
@@ -30,13 +34,17 @@ import { LoadingComponent } from './loading/loading.component'
     FooterComponent,
     HeaderComponent,
     AlertComponent,
-    LoadingComponent
+    LoadingComponent,
+    BottomComponent,
+    DiscMenuComponent
   ],
   exports: [
     FooterComponent,
     HeaderComponent,
     AlertComponent,
-    LoadingComponent
+    LoadingComponent,
+    BottomComponent,
+    DiscMenuComponent
   ]
 })
 

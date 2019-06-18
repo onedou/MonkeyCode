@@ -17,10 +17,10 @@
           <a class="nav-link" routerLink="/curriculum">课程介绍</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://paracraft.keepwork.com/archives/category/recommend?lang=zh">作品</a>
+          <a class="nav-link" target="_blank" href="http://paracraft.keepwork.com/archives/category/recommend?lang=zh">作品</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:alert('请拨打15018403205')">联系我们</a>
+        <li class="nav-item" [ngClass]="url === '/contact' ? 'active' : ''">
+          <a class="nav-link" routerLink="/contact">联系我们</a>
         </li>
       </ul>
     </div>

@@ -1,11 +1,12 @@
 <header></header>
+<disc-menu></disc-menu>
 <div>
   <div class="suspension-menu">
     <div class="suspension-top-menu">专注6~18岁编程教育</div>
-    <div class="suspension-main-menu-1">客服咨询</div>
-    <div class="suspension-main-menu-1">课程介绍</div>
-    <div class="suspension-bottom-menu">在线报名</div>
-    <div></div>
+    <a class="suspension-main-menu-1" [ngClass]="url === '/' ? 'active' : ''" routerLink="/">客服咨询</a>
+    <a class="suspension-main-menu-1" [ngClass]="url === '/curriculum' ? 'active' : ''" routerLink="/curriculum">课程介绍</a>
+    <a class="suspension-main-menu-1" [ngClass]="url === '/signUp' ? 'active' : ''" routerLink="/signUp">在线报名</a>
+    <div class="suspension-main-menu-2"></div>
   </div>
   <!--banner-->
   <div class="banner">
@@ -127,8 +128,7 @@
               <h5>2019年1月3日</h5>
               <p>
                 基础班即将开班，点击此处可以<a
-                  target="_blank"
-                  href="http://koudaigou.net/web/formview/5c2e1ce275a03c0f7fee8744"
+                  routerLink="/signUp"
                   >立即报名</a
                 >
               </p>
@@ -295,4 +295,5 @@
   </div>
   <!--semst-->
 </div>
+<bottom></bottom>
 <footer></footer>

@@ -1,0 +1,97 @@
+#wrapper {
+  text-align:center;
+  font-family: 'Lato', sans-serif;
+  text-transform:uppercase;
+  display: none;
+}
+
+#toolbar {  
+  max-width: 670px;
+  min-width: 550px;
+  float: left;
+  position: fixed;
+  bottom: 70px;
+  left: 0;
+  z-index: 3;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #357dcd;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2em;
+  position: relative;
+  left: 0;
+  z-index: 1;
+  line-height: 35px;
+}
+
+.button,.icons{
+  -webkit-transition: -webkit-all 1s cubic-bezier(.87,-.41,.19,1.44);
+  transition: all 1s cubic-bezier(.87,-.41,.19,1.44);
+}
+
+.button.active {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left:0;
+}
+
+.icons {
+  width:0%;
+  overflow:hidden;
+  height:36px;
+  list-style:none;
+  background-color:#ffffff;
+  margin:-38px 0 0 0;
+  border-radius: 2em;
+}
+
+.icons.open {
+  width: 30%;
+  height: 200px;
+  margin: -210px 0 0 20px;
+  overflow: hidden;
+  padding: 13px 10px 10px 15px;
+  box-shadow: 1px 1px 1px 1px #DCDCDC;
+  border-radius: 2em;
+  background-color:#ffffff;
+}
+
+.icons li {
+  display: none;
+  width:10%;
+  color:#357dcd;
+}
+
+.icons.open li {
+  width:100%;
+  height: 59px;
+  display: block;
+}
+
+.icons.open li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+}
+
+.icons.open li i {
+  display: block;
+}
+
+@media (max-width:768px) {
+  #wrapper {
+    display: block;
+  }
+}
+
+@media (max-width:640px) {
+  #wrapper {
+    display: block;
+  }
+}

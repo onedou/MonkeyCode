@@ -1,0 +1,158 @@
+.contact {
+  max-width: 1180px;
+  width: 100%;
+  height: 382px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.contact-text {
+  width: 29%;
+  float: right;
+}
+
+.contact-text div {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.shop-title {
+  font-size: 28px;
+}
+
+.shop-address {
+  font-size: 16px;
+}
+
+.phone-title {
+  font-size: 28px;
+}
+
+.phone-number {
+  font-size: 16px;
+}
+
+.wechat-title {
+  font-size: 28px;
+}
+
+.wechat-number {
+  font-size: 16px;
+}
+
+.QR {
+  background-image: url(../../../assets/images/qrcode.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+#map {
+  width: 69%;
+  height: 362px;
+  float: left;
+}
+
+.anchorBL{
+  display:none;
+}
+
+@media (max-width:1280px) {
+  
+  .shop-title {
+    font-size: 21px;
+  }
+  
+  .shop-address {
+    font-size: 14px;
+  }
+  
+  .phone-title {
+    font-size: 21px;
+  }
+  
+  .phone-number {
+    font-size: 14px;
+  }
+  
+  .wechat-title {
+    font-size: 21px;
+  }
+  
+  .wechat-number {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:768px) {
+  .contact {
+    height: 410px;
+  }
+
+  #map {
+    margin-left: 5px;
+    height: 390px;
+  }
+}
+
+@media (max-width:640px) {
+  .contact {
+    height: 720px;
+  }
+
+  .contact-text {
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+  }
+
+  .contact-text div {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .shop-title {
+    font-size: 14px;
+  }
+  
+  .shop-address {
+    font-size: 12px;
+  }
+  
+  .phone-title {
+    font-size: 14px;
+  }
+  
+  .phone-number {
+    font-size: 12px;
+  }
+  
+  .wechat-title {
+    font-size: 14px;
+  }
+  
+  .wechat-number {
+    font-size: 12px;
+  }
+
+  #map {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .QR {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:320px) { 
+  .contact {
+    height: 720px;
+  }
+}

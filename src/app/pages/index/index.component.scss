@@ -30,18 +30,17 @@
   text-align: center;
   line-height: 35px;
   color: #fff;
+  display: block;
+  position: relative;
 }
 
-.suspension-bottom-menu {
-  background-image: url(src/assets/images/SuspensionMenu3.png);
+.suspension-main-menu-2 {
+  background-image: url(src/assets/images/SuspensionMenu4.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 106px;
-  height: 65px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 35px;
-  color: #fff;
+  width: 62px;
+  height: 62px;
+  margin: -40px auto 0 auto;
 }
 
 /*--banner--*/
@@ -1386,6 +1385,11 @@ h2.typoh2 {
 }
 
 @media (max-width:768px) {
+
+  .suspension-menu {
+    display: none;
+  }
+
   .grid_5 {
     padding: 0 0 1em;
   }
@@ -1396,6 +1400,10 @@ h2.typoh2 {
 }
 
 @media (max-width:640px) {
+
+  .suspension-menu {
+    display: none;
+  }
 
   h1,
   .h1,
@@ -1479,6 +1487,11 @@ h2.typoh2 {
 }
 
 @media (max-width: 320px) {
+
+  .suspension-menu {
+    display: none;
+  }
+  
   .grid_4 {
     margin-top: 18px;
   }
