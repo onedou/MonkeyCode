@@ -196,3 +196,20 @@ ul.social-icons1 li {
   padding: 44% 10%;
   right: 0%;
 }
+@media (max-width:640px) {
+  .phone-width {
+    max-width: 320px;
+    padding: 0;
+    margin: 0 auto;
+    border: 0;
+  }
+}
+
+@media (max-width:320px) {
+  .phone-width {
+    max-width: 275px;
+    padding: 0;
+    margin: 0 auto;
+    border: 0;
+  }
+}
