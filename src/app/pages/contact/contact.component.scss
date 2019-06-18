@@ -1,6 +1,6 @@
 .contact {
   width: 100%;
-  height: 445px;
+  height: 675px;
   background-image: url(../../../assets/images/banner.jpg);
   margin-bottom: 10px;
   background-repeat: no-repeat;
@@ -8,9 +8,10 @@
 }
 
 .contact-text {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding-top: 40px;
+  max-width: 1180px;
 }
 
 .contact-text div {
@@ -54,21 +55,24 @@
   margin: 0 auto 10px auto;
 }
 
-#map {
-  width: 65%;
-  height: 775px;
-  float: left;
+.QR-max {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.QR-code {
-  background-image: url(../../../assets/images/QR2.png);
-  width: 30%;
-  height: 480px;
-  float: right;
-  display: inline-block;
+.QR {
+  background-image: url(../../../assets/images/qrcode.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: 150px;
+  width: 258px;
+  height: 258px;
+}
+
+#map {
+  width: 100%;
+  height: 775px;
+  float: left;
 }
 
 .anchorBL{
@@ -77,7 +81,11 @@
 
 @media (max-width:1280px) {
   .contact {
-    height: 560px;
+    height: 490px;
+  }
+
+  .contact-text {
+    padding-top: 65px;
   }
   
   .shop-title {
@@ -107,20 +115,13 @@
     font-size: 1em;
   }
 
+  .QR {
+    width: 128px;
+    height: 128px;
+  }
+
   .map {
     height: 434px;
-  }
-  
-  .QR-code {
-    height: 434px;
-  }
-}
-@media (max-width:1280px) {
-  .contact {
-    height: 490px;
-  }
-  .contact-text {
-    padding-top: 120px;
   }
 }
 
@@ -136,15 +137,6 @@
   #map {
     width: 100%;
     height: 450px;
-  }
-
-  .QR-code {
-    width: 50%;
-    height: 490px;
-    display: block;
-    clear: both;
-    margin: 0 auto;
-    float: none;
   }
 }
 
@@ -195,13 +187,8 @@
     height: 450px;
   }
 
-  .QR-code {
-    width: 50%;
-    height: 300px;
-    display: block;
-    clear: both;
+  .QR {
     margin: 0 auto;
-    float: none;
   }
 }
 
@@ -216,13 +203,8 @@
     padding-bottom: 10px;
   }
 
-  .QR-code {
-    width: 50%;
-    height: 220px;
-    display: block;
-    clear: both;
-    margin: 0 auto;
-    float: none;
+  .QR {
+    margin: 10px auto 0 auto;
   }
 
 }
