@@ -1,11 +1,12 @@
 .carousel-size {
-  height: 650px;
+  height: 720px;
   width: 100%;
 }
 
 .carousel-img-size {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .max-min {
@@ -64,7 +65,7 @@
 .related {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
