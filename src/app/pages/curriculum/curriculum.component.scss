@@ -72,6 +72,10 @@
   margin-bottom: 40px;
 }
 
+.related-phone {
+  margin: 5px;
+}
+
 .related-pictures {
   width: 304px;
   height: 226px;
@@ -127,6 +131,7 @@
 
 .tips {
   display: none;
+  color: #777777;
 }
 
 @media (max-width:1425px) { 
@@ -149,12 +154,24 @@
     padding: 0;
   }
 
+  .related {
+    display: block;
+    clear: both;
+  }
+
+  .related-phone {
+    display: block;
+    width: 304px;
+    height: 226px;
+    margin: 0 auto;
+  }
+
   .curriculum-img {
     width: 1412px;
   }
 
   .tips {
-    display: none;
+    display: block;
     padding: 0 25px;
     font-size: 2em;
     font-weight: bolder;
