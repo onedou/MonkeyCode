@@ -12,6 +12,7 @@ import { AlertComponent } from './alert/alert.component'
 import { LoadingComponent } from './loading/loading.component'
 import { BottomComponent } from '../pages/common/bottom/bottom.component'
 import { DiscMenuComponent } from '../pages/common/discMenu/discMenu.component'
+import { SuspensionComponent } from '../pages/common/suspension/suspension.component'
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DiscMenuComponent } from '../pages/common/discMenu/discMenu.component'
     AlertComponent,
     LoadingComponent,
     BottomComponent,
-    DiscMenuComponent
+    DiscMenuComponent,
+    SuspensionComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { DiscMenuComponent } from '../pages/common/discMenu/discMenu.component'
     AlertComponent,
     LoadingComponent,
     BottomComponent,
-    DiscMenuComponent
+    DiscMenuComponent,
+    SuspensionComponent
   ],
   exports: [
     FooterComponent,
@@ -44,7 +47,8 @@ import { DiscMenuComponent } from '../pages/common/discMenu/discMenu.component'
     AlertComponent,
     LoadingComponent,
     BottomComponent,
-    DiscMenuComponent
+    DiscMenuComponent,
+    SuspensionComponent
   ]
 })
 

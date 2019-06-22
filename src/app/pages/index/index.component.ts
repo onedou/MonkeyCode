@@ -13,9 +13,7 @@ export class IndexComponent {
 
   constructor(
     private router: Router
-  ) {
-    console.log(this.router)
-  }
+  ) {}
 
   url: string = this.router && this.router.url && this.router.url || ''
 

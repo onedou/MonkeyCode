@@ -1,70 +1,72 @@
-<div class="min-curriculum-size">
-  <header></header>
-    <!--banner-->
-    <div id="carouselExampleIndicators" class="carousel slide min-carousel" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item carousel-size active">
-          <img class="d-block w-100 carousel-img-size" src="../../../assets/images/carouselImgI.jpg" alt="First slide">
+
+<header></header>
+<disc-menu></disc-menu>
+<suspension></suspension>
+  <!--banner-->
+  <div id="carouselExampleIndicators" class="carousel slide min-carousel" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item carousel-size active">
+        <img class="d-block w-100 carousel-img-size" src="../../../assets/images/carouselImgI.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item carousel-size">
+        <img class="d-block w-100 carousel-img-size" src="../../../assets/images/carouselImgH.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item carousel-size">
+        <img class="d-block w-100 carousel-img-size" src="../../../assets/images/carouselImgJ.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!--//banner-->
+  <!-- process -->
+  <div class="process process-left1">
+    <span>编程是人工智能时代必备能力</span><br>
+    <span>提升智力、创新能力、想象力等核心素质</span><br>
+    <span class="process-left1-span">孩子打开编程世界，仅需3步</span>
+  </div>
+  <div class="process process-left2">
+    <span class="process-left-span">填写信息</span><br>
+    <span>官网任意渠道报名</span>
+  </div>
+  <div class="process process-left3">
+    <span class="process-left-span">预约听课</span><br>
+    <span>教学顾问免费解答安排听课</span>
+  </div>
+  <div class="process process-left4">
+    <span class="process-left-span">免费体验</span><br>
+    <span>带领孩子深度体验编程的乐趣</span>
+  </div>
+  <!-- //process -->
+  <div class="max-min">
+    <div class="related">
+      <div class="related-phone" *ngFor="let item of related">
+        <div class="related-span related-pictures-decorate-left1">
+          <span>{{item.relatedTextA}}</span><br>
+          <span>{{item.relatedTextB}}</span>
         </div>
-        <div class="carousel-item carousel-size">
-          <img class="d-block w-100 carousel-img-size" src="../../../assets/images/carouselImgH.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item carousel-size">
-          <img class="d-block w-100 carousel-img-size" src="../../../assets/images/carouselImgJ.jpg" alt="Third slide">
+        <div class="related-pictures">
+          <img src="{{item.relatedImg}}" class="related-pictures-left-img">
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
-    <!--//banner-->
-    <!-- process -->
-    <div class="process process-left1">
-      <span>编程是人工智能时代必备能力</span><br>
-      <span>提升智力、创新能力、想象力等核心素质</span><br>
-      <span class="process-left1-span">孩子打开编程世界，仅需3步</span>
+    <!-- curriculum -->
+    <div class="tips">向左滑动查看更多>>></div>
+    <div class="curriculum">
+      <img class="curriculum-img" src="../../../assets/images/curriculum.png">
     </div>
-    <div class="process process-left2">
-      <span class="process-left-span">填写信息</span><br>
-      <span>官网任意渠道报名</span>
-    </div>
-    <div class="process process-left3">
-      <span class="process-left-span">预约听课</span><br>
-      <span>教学顾问免费解答安排听课</span>
-    </div>
-    <div class="process process-left4">
-      <span class="process-left-span">免费体验</span><br>
-      <span>带领孩子深度体验编程的乐趣</span>
-    </div>
-    <!-- //process -->
-    <div class="max-min">
-      <div class="related">
-        <div class="related-phone" *ngFor="let item of related">
-          <div class="related-span related-pictures-decorate-left1">
-            <span>{{item.relatedTextA}}</span><br>
-            <span>{{item.relatedTextB}}</span>
-          </div>
-          <div class="related-pictures">
-            <img src="{{item.relatedImg}}" class="related-pictures-left-img">
-          </div>
-        </div>
-      </div>
-      <!-- curriculum -->
-      <div class="tips">向左滑动查看更多>>></div>
-      <div class="curriculum">
-        <img class="curriculum-img" src="../../../assets/images/curriculum.png">
-      </div>
-      <!-- //curriculum -->
-    </div>
-  <footer></footer>
-</div>
+    <!-- //curriculum -->
+  </div>
+<bottom></bottom>
+<footer></footer>
