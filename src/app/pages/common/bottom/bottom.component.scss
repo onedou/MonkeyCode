@@ -1,15 +1,24 @@
+.bottom-box {
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
 .bottom {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 50px;
     background-color: #357dcd;
-    z-index: 2;
+    z-index: 99999;
     font-size: 22px;
     color: #fff;
     line-height: 50px;
     padding-left: 20%;
     padding-right: 10%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .btn-sign-up {
@@ -25,12 +34,13 @@
 
 @media (max-width:768px) {
   .bottom {
-    font-size: 0.5em;
+    overflow: scroll;
+    font-size: 12px;
     padding-left: 5px;
     padding-right: 5px;
   }
   .btn-sign-up {
-    font-size: 10px;
+    font-size: 12px;
     width: 100px;
     line-height: 25px;
     letter-spacing:1px;
@@ -38,6 +48,10 @@
 }
 
 @media (max-width:640px) {
+  .bottom {
+    overflow: scroll;
+  }
+
   .btn-sign-up {
     font-size: 5px;
     width: 80px;
